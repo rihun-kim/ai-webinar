@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OG Image (1200x630)</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: "Pretendard", -apple-system, sans-serif;
+        background: #1a1a2e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        word-break: keep-all;
+      }
+      .og {
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        padding: 70px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .og::before {
+        content: "";
+        position: absolute;
+        width: 700px; height: 700px;
+        background: radial-gradient(circle, rgba(99,102,241,0.5), transparent 60%);
+        top: -300px; right: -200px;
+        filter: blur(50px);
+      }
+      .og::after {
+        content: "";
+        position: absolute;
+        width: 600px; height: 600px;
+        background: radial-gradient(circle, rgba(245,158,11,0.4), transparent 60%);
+        bottom: -250px; left: -180px;
+        filter: blur(50px);
+      }
+      .og__inner { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+
+      .og__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .og__brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: rgba(255,255,255,0.7);
+      }
+      .og__brand-dot {
+        width: 14px; height: 14px;
+        background: #fbbf24;
+        border-radius: 50%;
+        box-shadow: 0 0 18px #fbbf24;
+      }
+      .og__live {
+        padding: 10px 18px;
+        background: rgba(239,68,68,0.18);
+        border: 1.5px solid rgba(239,68,68,0.45);
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: #fca5a5;
+      }
+
+      .og__main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 24px 0;
+      }
+      .og__eyebrow {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(251,191,36,0.15);
+        border: 1.5px solid rgba(251,191,36,0.4);
+        color: #fbbf24;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 999px;
+        margin-bottom: 24px;
+        width: fit-content;
+      }
+      .og__title {
+        font-size: 78px;
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        margin-bottom: 22px;
+      }
+      .og__title-accent {
+        background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #ec4899 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .og__sub {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.85);
+        letter-spacing: -0.01em;
+      }
+
+      .og__bottom {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      .og__date {
+        background: #fbbf24;
+        color: #1a1d29;
+        border-radius: 16px;
+        padding: 14px 22px;
+        text-align: center;
+      }
+      .og__date-month {
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .og__date-day {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin: 4px 0;
+      }
+      .og__date-weekday {
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .og__info {
+        flex: 1;
+      }
+      .og__info-row {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .og__info-row strong {
+        color: rgba(255,255,255,0.55);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        min-width: 70px;
+      }
+      .og__cta {
+        padding: 18px 32px;
+        background: linear-gradient(135deg, #fbbf24, #f97316);
+        color: #1a1d29;
+        font-size: 22px;
+        font-weight: 900;
+        border-radius: 999px;
+        letter-spacing: -0.01em;
+        box-shadow: 0 16px 40px rgba(245,158,11,0.45);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="og">
+      <div class="og__inner">
+        <div class="og__top">
+          <div class="og__brand">
+            <span class="og__brand-dot"></span>
+            <span>학부모 무료 웨비나</span>
+          </div>
+          <div class="og__live">● LIVE WEBINAR</div>
+        </div>
+
+        <div class="og__main">
+          <span class="og__eyebrow">초등 4~6학년 학부모를 위한 단 1회 라이브</span>
+          <h1 class="og__title">
+            AI를 모르는 아이는<br />
+            <span class="og__title-accent">10년 뒤 어떤 어른이 될까요?</span>
+          </h1>
+          <p class="og__sub">
+            현직 IT 대기업 개발자 아빠가 직접 알려주는, 진짜 AI 교육
+          </p>
+        </div>
+
+        <div class="og__bottom">
+          <div class="og__date">
+            <div class="og__date-month">5월</div>
+            <div class="og__date-day">07</div>
+            <div class="og__date-weekday">목요일</div>
+          </div>
+          <div class="og__info">
+            <div class="og__info-row">
+              <strong>TIME</strong>
+              <span>저녁 9:00 · 45분</span>
+            </div>
+            <div class="og__info-row">
+              <strong>WHERE</strong>
+              <span>Google Meet (온라인)</span>
+            </div>
+          </div>
+          <div class="og__cta">무료 신청 →</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
