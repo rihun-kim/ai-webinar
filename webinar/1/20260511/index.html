@@ -1369,7 +1369,10 @@
       const submitBtn = document.getElementById("submitBtn");
 
       if (form && dateInfo) {
+        const nicknameInput = form.querySelector('input[name="nickname"]');
         const birthYearInput = form.querySelector('input[name="birthYear"]');
+        const phoneInput = form.querySelector('input[name="phone"]');
+        const agreeInput = form.querySelector('input[name="agree"]');
 
         const isValidYear = (v) => {
           const n = parseInt(v, 10);
@@ -1378,9 +1381,22 @@
           );
         };
         const updateSubmitState = () => {
-          submitBtn.disabled = !isValidYear(birthYearInput.value.trim());
+          const validNickname = !!nicknameInput.value.trim();
+          const validYear = isValidYear(birthYearInput.value.trim());
+          const validPhone =
+            phoneInput.value.replace(/[^0-9]/g, "").length >= 9;
+          const validAgree = agreeInput.checked;
+          submitBtn.disabled = !(
+            validNickname &&
+            validYear &&
+            validPhone &&
+            validAgree
+          );
         };
-        birthYearInput.addEventListener("input", updateSubmitState);
+        [nicknameInput, birthYearInput, phoneInput].forEach((el) =>
+          el.addEventListener("input", updateSubmitState),
+        );
+        agreeInput.addEventListener("change", updateSubmitState);
         updateSubmitState();
 
         form.addEventListener("submit", async (e) => {
