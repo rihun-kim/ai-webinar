@@ -1421,11 +1421,12 @@
           submitBtn.textContent = "신청 중…";
 
           try {
-            // webinar/{TOPIC_ID}/{YYYYMMDD}/registrations
+            // webinar/{TOPIC_ID}/sessions/{YYYYMMDD}/registrations
             const regCol = collection(
               db,
               "webinar",
               TOPIC_ID,
+              "sessions",
               dateInfo.raw,
               "registrations",
             );
