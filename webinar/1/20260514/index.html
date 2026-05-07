@@ -1263,6 +1263,15 @@
               ></textarea>
             </label>
 
+            <label class="s4__field">
+              <span class="s4__field-label">추천코드 <em>(선택)</em></span>
+              <input
+                type="text"
+                name="referralCode"
+                placeholder="추천코드를 입력해주세요"
+              />
+            </label>
+
             <label class="s4__agree">
               <input type="checkbox" name="agree" required />
               <span
@@ -1407,6 +1416,7 @@
           const birthYear = (fd.get("birthYear") || "").trim();
           const phone = (fd.get("phone") || "").trim();
           const question = (fd.get("question") || "").trim();
+          const referralCode = (fd.get("referralCode") || "").trim();
           const agree = !!fd.get("agree");
 
           if (!nickname) {
@@ -1451,6 +1461,7 @@
               birthYear: yearNum,
               phone,
               question,
+              referralCode,
               userAgent: navigator.userAgent,
               createdAt: serverTimestamp(),
             });
