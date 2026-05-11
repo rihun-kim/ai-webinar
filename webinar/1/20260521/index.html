@@ -1,0 +1,1485 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI시대, 앞서가려면 | 학부모 무료 웨비나</title>
+    <meta
+      name="description"
+      content="초등학생 학부모를 위한 단 1회 라이브. IT 대기업 현직 개발자 아빠가 직접 알려주는 진짜 AI 교육."
+    />
+
+    <!-- Open Graph (카카오톡, 페이스북 등) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AI 시대, 우리 아이 교육" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="AI 시대, 우리 아이 교육 | 학부모 무료 웨비나" />
+    <meta
+      property="og:description"
+      content="초등학생 학부모를 위한 IT 대기업 현직 개발자 아빠의 진짜 AI 교육 이야기."
+    />
+    <meta property="og:url" content="https://ai-webinar.pages.dev/webinar/1/" />
+    <meta
+      property="og:image"
+      content="https://ai-webinar.pages.dev/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AI 시대, 우리 아이 교육 웨비나" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI 시대, 우리 아이 교육 | 학부모 무료 웨비나" />
+    <meta
+      name="twitter:description"
+      content="초등학생 학부모 대상 45분 라이브."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ai-webinar.pages.dev/og-image.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          "Pretendard",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #06070f;
+        min-height: 100vh;
+        padding: 40px 16px 100px;
+        color: #fff;
+        word-break: keep-all;
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* ========== POSTER ========== */
+      .poster {
+        width: 100%;
+        max-width: 760px;
+        background: #0a0b1e;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow:
+          0 60px 120px rgba(0, 0, 0, 0.6),
+          0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+
+      .section {
+        position: relative;
+        padding: 56px 48px;
+        overflow: hidden;
+      }
+      .section + .section {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      /* ========== SECTION 1 — TOPIC ========== */
+      .s1 {
+        background: linear-gradient(
+          135deg,
+          #0f0c29 0%,
+          #302b63 50%,
+          #24243e 100%
+        );
+        padding: 64px 48px 72px;
+      }
+      .s1::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.4),
+          transparent 60%
+        );
+        top: -300px;
+        right: -200px;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .s1::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(245, 158, 11, 0.3),
+          transparent 60%
+        );
+        bottom: -200px;
+        left: -150px;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .s1__inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .s1__topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+      }
+      .s1__brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .s1__brand-dot {
+        width: 10px;
+        height: 10px;
+        background: #fbbf24;
+        border-radius: 50%;
+        box-shadow: 0 0 14px #fbbf24;
+      }
+      .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #fca5a5;
+      }
+      .live-badge__dot {
+        width: 6px;
+        height: 6px;
+        background: #ef4444;
+        border-radius: 50%;
+        animation: blink 1.4s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      .s1__eyebrow {
+        display: inline-block;
+        padding: 6px 14px;
+        background: rgba(251, 191, 36, 0.12);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        color: #fbbf24;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        border-radius: 999px;
+        margin-bottom: 20px;
+      }
+      .s1__title {
+        font-size: clamp(34px, 5.5vw, 56px);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        margin-bottom: 20px;
+      }
+      .s1__title-accent {
+        display: block;
+        background: linear-gradient(
+          135deg,
+          #fbbf24 0%,
+          #f97316 50%,
+          #ec4899 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .s1__lead {
+        font-size: 16px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 32px;
+        max-width: 92%;
+      }
+      .s1__lead strong {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      /* 일정 박스 */
+      .s1__when {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 22px 26px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        backdrop-filter: blur(20px);
+      }
+      .s1__when-date {
+        text-align: center;
+        padding-right: 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      .s1__when-month {
+        display: inline-block;
+        padding: 4px 12px;
+        font-size: 14px;
+        font-weight: 800;
+        color: #1a1d29;
+        background: #fbbf24;
+        border-radius: 999px;
+        line-height: 1.2;
+      }
+      .s1__when-day {
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin: 8px 0 4px;
+      }
+      .s1__when-weekday {
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+        letter-spacing: 0.04em;
+      }
+      .s1__when-info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .s1__when-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+      }
+      .s1__when-row strong {
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.08em;
+        min-width: 50px;
+      }
+      .s1__when-row span {
+        font-weight: 700;
+        font-size: 15px;
+        color: #fff;
+      }
+
+      /* ========== SECTION 2 — TARGET ========== */
+      .s2 {
+        background: linear-gradient(180deg, #0a0b1e 0%, #11142b 100%);
+      }
+      .s2__title {
+        font-size: clamp(26px, 3.8vw, 36px);
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+      }
+      .s2__title strong {
+        background: linear-gradient(135deg, #fbbf24, #f97316);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+      }
+      .s2__sub {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 28px;
+        line-height: 1.65;
+      }
+
+      .s2__main {
+        padding: 22px 26px;
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.18),
+          rgba(139, 92, 246, 0.08)
+        );
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        margin-bottom: 22px;
+      }
+      .s2__main-label {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: #a78bfa;
+        margin-bottom: 8px;
+      }
+      .s2__main-text {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.35;
+      }
+
+      .s2__types {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .s2__type {
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+      }
+      .s2__type-num {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 4px;
+      }
+      .s2__type-name {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        margin-bottom: 6px;
+      }
+      .s2__type-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.55;
+      }
+      .s2__type-feature {
+        background: linear-gradient(
+          135deg,
+          rgba(251, 191, 36, 0.14),
+          rgba(249, 115, 22, 0.06)
+        );
+        border-color: rgba(251, 191, 36, 0.35);
+      }
+      .s2__type-feature .s2__type-num {
+        color: #fbbf24;
+      }
+
+      .s2__voices-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 14px;
+      }
+      .s2__voices {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .s2__voice {
+        position: relative;
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: 3px solid rgba(251, 191, 36, 0.7);
+        border-radius: 4px 12px 12px 4px;
+      }
+      .s2__voice--wide {
+        grid-column: span 2;
+      }
+      .s2__voice p {
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      .s2__hook {
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-left: 3px solid #fbbf24;
+        border-radius: 4px 12px 12px 4px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.65;
+      }
+      .s2__hook strong {
+        color: #fbbf24;
+        font-weight: 800;
+      }
+
+      /* ========== SECTION 3 — CONTENT ========== */
+      .s3 {
+        background: linear-gradient(180deg, #11142b 0%, #0f1226 100%);
+      }
+      .s3__title {
+        font-size: clamp(26px, 3.8vw, 36px);
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+      }
+      .s3__title strong {
+        color: #fbbf24;
+        font-weight: 900;
+      }
+      .s3__sub {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 28px;
+      }
+
+      .s3__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .s3__item {
+        display: grid;
+        grid-template-columns: 56px 1fr auto;
+        gap: 18px;
+        align-items: center;
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        transition: all 0.3s;
+      }
+      .s3__item-num {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+      .s3__item:nth-child(2) .s3__item-num {
+        background: linear-gradient(135deg, #ec4899, #f97316);
+      }
+      .s3__item:nth-child(3) .s3__item-num {
+        background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        color: #1a1d29;
+      }
+      .s3__item:nth-child(4) .s3__item-num {
+        background: linear-gradient(135deg, #10b981, #34d399);
+      }
+
+      .s3__item-body h3 {
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+      .s3__item-body p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.5;
+      }
+      .s3__item-time {
+        font-size: 13px;
+        font-weight: 800;
+        color: #fbbf24;
+        white-space: nowrap;
+      }
+
+      .s3__bonus {
+        padding: 18px 22px;
+        background: linear-gradient(
+          135deg,
+          rgba(251, 191, 36, 0.1),
+          rgba(249, 115, 22, 0.05)
+        );
+        border: 1px dashed rgba(251, 191, 36, 0.4);
+        border-radius: 14px;
+      }
+      .s3__bonus-label {
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(251, 191, 36, 0.2);
+        color: #fbbf24;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        border-radius: 999px;
+        margin-bottom: 10px;
+      }
+      .s3__bonus-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+      }
+      .s3__bonus-list li {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      /* ========== SECTION 4 — APPLY ========== */
+      .s4 {
+        background: linear-gradient(
+          180deg,
+          #0f1226 0%,
+          #1e1b4b 50%,
+          #0a0b1e 100%
+        );
+        position: relative;
+      }
+      .s4::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(251, 191, 36, 0.2),
+          transparent 60%
+        );
+        top: -100px;
+        right: -150px;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .s4__inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .s4__title {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+      }
+      .s4__title-accent {
+        background: linear-gradient(135deg, #fbbf24, #f97316);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .s4__sub {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 28px;
+        line-height: 1.65;
+      }
+
+      .s4__price {
+        padding: 24px 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.15),
+          rgba(16, 185, 129, 0.08)
+        );
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        border-radius: 18px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .s4__price-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #4ade80;
+        margin-bottom: 4px;
+      }
+      .s4__price-amount {
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        color: #fff;
+      }
+      .s4__price-amount span {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        margin-left: 8px;
+      }
+      .s4__price-meta {
+        text-align: right;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;
+      }
+      .s4__price-meta strong {
+        color: #4ade80;
+      }
+
+      .s4__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .s4__detail {
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+      }
+      .s4__detail-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 4px;
+      }
+      .s4__detail-value {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+      .s4__detail-value strong {
+        color: #fbbf24;
+      }
+
+      .s4__cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 22px 28px;
+        background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+        border-radius: 18px;
+        box-shadow: 0 16px 40px rgba(245, 158, 11, 0.4);
+        text-decoration: none;
+        transition: all 0.25s;
+      }
+      .s4__cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 48px rgba(245, 158, 11, 0.5);
+      }
+      .s4__cta-text {
+        color: #1a1d29;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+      .s4__cta-text small {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(26, 29, 41, 0.7);
+        margin-top: 2px;
+      }
+      .s4__cta-arrow {
+        width: 44px;
+        height: 44px;
+        background: #1a1d29;
+        color: #fbbf24;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .s4__urgency {
+        margin-top: 18px;
+        padding: 14px 18px;
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 13px;
+        color: #fca5a5;
+        font-weight: 600;
+      }
+      .s4__urgency strong {
+        color: #fff;
+      }
+
+      /* ========== FORM ========== */
+      .s4__form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .s4__form[hidden] {
+        display: none;
+      }
+      .s4__form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .s4__field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .s4__field-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .s4__field-label em {
+        font-style: normal;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.4);
+        margin-left: 4px;
+      }
+      .s4__field input[type="text"],
+      .s4__field input[type="email"],
+      .s4__field input[type="tel"],
+      .s4__field input[type="number"],
+      .s4__field select,
+      .s4__field textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+        font-family: inherit;
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1.5px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: #fff;
+        outline: none;
+        transition: all 0.2s;
+      }
+      .s4__field select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23fbbf24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 36px;
+        cursor: pointer;
+      }
+      .s4__field select option {
+        background: #11142b;
+        color: #fff;
+      }
+      .s4__field input::placeholder,
+      .s4__field textarea::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .s4__field input:focus,
+      .s4__field select:focus,
+      .s4__field textarea:focus {
+        border-color: #fbbf24;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+      }
+      .s4__field textarea {
+        resize: vertical;
+        min-height: 60px;
+      }
+
+      .s4__chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .s4__chip {
+        cursor: pointer;
+      }
+      .s4__chip input {
+        display: none;
+      }
+      .s4__chip span {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1.5px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.15s;
+      }
+      .s4__chip:hover span {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .s4__chip input:checked + span {
+        background: rgba(251, 191, 36, 0.15);
+        border-color: #fbbf24;
+        color: #fbbf24;
+      }
+
+      .s4__agree {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
+        margin-top: 4px;
+      }
+      .s4__agree input {
+        margin-top: 2px;
+        accent-color: #fbbf24;
+        cursor: pointer;
+      }
+
+      .s4__submit {
+        margin-top: 8px;
+        padding: 18px 24px;
+        background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+        color: #1a1d29;
+        font-size: 17px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 0 16px 40px rgba(245, 158, 11, 0.4);
+        transition: all 0.25s;
+        font-family: inherit;
+      }
+      .s4__submit:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 48px rgba(245, 158, 11, 0.55);
+      }
+      .s4__submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      .s4__form-note {
+        font-size: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 4px;
+      }
+
+      .s4__success {
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(34, 197, 94, 0.08);
+        border: 1px solid rgba(34, 197, 94, 0.25);
+        border-radius: 16px;
+      }
+      .s4__success-icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+      .s4__success h3 {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .s4__success p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.65;
+      }
+
+      .s4__speaker {
+        margin-top: 22px;
+        padding: 18px 20px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .s4__speaker-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6366f1, #f59e0b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        flex-shrink: 0;
+      }
+      .s4__speaker-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .s4__speaker-label {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        color: #fbbf24;
+        margin-bottom: 2px;
+      }
+      .s4__speaker-name {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 2px;
+      }
+      .s4__speaker-role {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ========== INVALID DATE STATE ========== */
+      .invalid-date {
+        text-align: center;
+        padding: 80px 24px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .invalid-date h1 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .invalid-date p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.65;
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 600px) {
+        body {
+          padding: 16px 8px 80px;
+        }
+        .section {
+          padding: 44px 24px;
+        }
+        .s1 {
+          padding: 48px 24px 56px;
+        }
+        .s1__when {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .s1__when-date {
+          padding-right: 0;
+          padding-bottom: 16px;
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .s2__types {
+          grid-template-columns: 1fr;
+        }
+        .s2__voices {
+          grid-template-columns: 1fr;
+        }
+        .s2__voice--wide {
+          grid-column: span 1;
+        }
+        .s3__item {
+          grid-template-columns: 44px 1fr;
+          gap: 14px;
+        }
+        .s3__item-time {
+          grid-column: 2 / -1;
+          font-size: 12px;
+        }
+        .s4__details {
+          grid-template-columns: 1fr;
+        }
+        .s4__price {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .s4__price-meta {
+          text-align: left;
+        }
+        .s4__form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+        }
+        .poster {
+          box-shadow: none;
+          max-width: none;
+          border-radius: 0;
+        }
+        .section {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="poster" id="poster">
+      <!-- =========================================
+         SECTION 01 — 주제 (Topic)
+         ========================================= -->
+      <section class="section s1">
+        <div class="s1__inner">
+          <div class="s1__topbar">
+            <div class="s1__brand">
+              <span class="s1__brand-dot"></span>
+              <span>재능기부 · 학부모 웨비나</span>
+            </div>
+            <div class="live-badge">
+              <span class="live-badge__dot"></span>
+              <span>LIVE</span>
+            </div>
+          </div>
+
+          <span class="s1__eyebrow">AI교육에 관심있는 학부모님 대상</span>
+
+          <h1 class="s1__title">
+            AI시대, 앞서가려면<br />
+            <span class="s1__title-accent">어떤 AI교육이 필요할까요?</span>
+          </h1>
+
+          <p class="s1__lead">
+            ChatGPT 출시 2년 만에
+            <strong>주간 8억 명이 사용</strong>합니다.<br />
+            AI는 부모 세대가 알던 인터넷·스마트폰의 변화 속도와 다릅니다.<br />
+            <strong
+              >지금 넋놓고 국·영·수만 하면 미래엔 반드시 뒤쳐집니다.</strong
+            >
+          </p>
+
+          <div class="s1__when">
+            <div class="s1__when-date">
+              <div class="s1__when-month" id="whenMonth">5월</div>
+              <div class="s1__when-day" id="whenDay">07</div>
+              <div class="s1__when-weekday" id="whenWeekday">목요일</div>
+            </div>
+            <div class="s1__when-info">
+              <div class="s1__when-row">
+                <strong>TIME</strong>
+                <span>저녁 9:00 · 45분</span>
+              </div>
+              <div class="s1__when-row">
+                <strong>WHERE</strong>
+                <span>온라인 웨비나</span>
+              </div>
+              <div class="s1__when-row">
+                <strong>SEATS</strong>
+                <span>소수 그룹</span>
+              </div>
+              <div class="s1__when-row">
+                <strong>HOST</strong>
+                <span>IT 대기업 현직 개발자(아빠)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+         SECTION 02 — 필요한 대상 (Target)
+         ========================================= -->
+      <section class="section s2">
+        <h2 class="s2__title">
+          AI교육에 고민이신<br />
+          <strong> 학부모님들 오시면 됩니다.</strong>
+        </h2>
+
+        <div class="s2__main">
+          <div class="s2__main-label">★ MAIN TARGET</div>
+          <div class="s2__main-text">초등학생 자녀를 둔 모든 학부모님</div>
+        </div>
+
+        <div class="s2__voices-label">
+          실제 학부모님들 상담에서 들은 학부모님들의 고민 목소리
+        </div>
+        <div class="s2__voices">
+          <div class="s2__voice">
+            <p>“AI 시대라는데, 도대체 뭘 시켜야 할지 모르겠어요.”</p>
+          </div>
+          <div class="s2__voice">
+            <p>“옆집은 챗GPT 시킨다는데, 챗GPT를 가르치면 되는 건가요?”</p>
+          </div>
+          <div class="s2__voice">
+            <p>“아이한테 AI를 어떻게 가르쳐줘야 할지 모르겠어요.”</p>
+          </div>
+          <div class="s2__voice">
+            <p>“AI는 너무 빨리 변해서 따라가질 못하겠어요.”</p>
+          </div>
+          <div class="s2__voice">
+            <p>“코딩학원을 보내면 AI 공부가 되는 건가요?”</p>
+          </div>
+          <div class="s2__voice">
+            <p>“AI 학원 자체가 없는데 어떡하죠?”</p>
+          </div>
+          <div class="s2__voice s2__voice--wide">
+            <p>
+              “학교도 AI를 아이들에게 어떻게 가르쳐야 할지 모르는 거 같아요.”
+            </p>
+          </div>
+        </div>
+
+        <div class="s2__hook">
+          한 번이라도 이런 생각, 해보셨나요?<br />
+          <strong>이 웨비나는 그 막막함을 푸는 45분입니다.</strong>
+        </div>
+      </section>
+
+      <!-- =========================================
+         SECTION 03 — 다룰 내용 (Content)
+         ========================================= -->
+      <section class="section s3">
+        <h2 class="s3__title">
+          AI교육 관련으로 학부모님들이<br />
+          <strong>가장 많이 궁금했던 내용들을 중심으로</strong>
+        </h2>
+        <p class="s3__sub">
+          AI를 매일 다루는 현직 개발자 아빠가 솔직 담백하게 전달드립니다.
+        </p>
+
+        <div class="s3__list">
+          <div class="s3__item">
+            <div class="s3__item-num">01</div>
+            <div class="s3__item-body">
+              <h3>왜 지금, AI 교육이 필요한가?</h3>
+              <p>
+                5년 내 일자리 23% 변화 · 6개월마다 진화하는 AI · 우리 아이가 설
+                자리
+              </p>
+            </div>
+          </div>
+
+          <div class="s3__item">
+            <div class="s3__item-num">02</div>
+            <div class="s3__item-body">
+              <h3>어떤 AI를 써야 하는가?</h3>
+              <p>ChatGPT · Claude · Gemini, 진짜 맞는 AI 도구는?</p>
+            </div>
+          </div>
+
+          <div class="s3__item">
+            <div class="s3__item-num">03</div>
+            <div class="s3__item-body">
+              <h3>어떻게 써야 도움이 되는가?</h3>
+              <p>
+                "숙제 베끼기" 도구가 아닌, 생각하는 힘을 키우는 상황별 사용법
+              </p>
+            </div>
+          </div>
+
+          <div class="s3__item">
+            <div class="s3__item-num">04</div>
+            <div class="s3__item-body">
+              <h3>AI로 아이가 해낼 수 있는 것</h3>
+              <p>
+                1:1 AI 튜터 · 자기만의 앱 · 포트폴리오 · 웹페이지 · 작은 연구
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="s3__bonus">
+          <span class="s3__bonus-label">🎁 BONUS</span>
+          <ul class="s3__bonus-list">
+            <li>최신 AI 관련 뉴스 제공</li>
+            <li>AI 관련 1:1 교육상담 제공</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =========================================
+         SECTION 04 — 신청 (Apply)
+         ========================================= -->
+      <section class="section s4">
+        <div class="s4__inner">
+          <h2 class="s4__title">
+            들으러 오시면 <br />
+            <span class="s4__title-accent">AI교육이 명확해집니다.</span>
+          </h2>
+          <p class="s4__sub">현직 개발자 아빠의 진짜 이야기 45분</p>
+
+          <form id="registerForm" class="s4__form" novalidate>
+            <div class="s4__form-row">
+              <label class="s4__field">
+                <span class="s4__field-label">닉네임</span>
+                <input
+                  type="text"
+                  name="nickname"
+                  required
+                  placeholder="예: 햇살맘"
+                />
+              </label>
+              <label class="s4__field">
+                <span class="s4__field-label">아이 출생년도</span>
+                <input
+                  type="number"
+                  name="birthYear"
+                  required
+                  inputmode="numeric"
+                  min="2010"
+                  max="2020"
+                  placeholder="예: 2015"
+                />
+              </label>
+            </div>
+
+            <label class="s4__field">
+              <span class="s4__field-label">휴대폰 번호</span>
+              <input
+                type="tel"
+                name="phone"
+                required
+                inputmode="numeric"
+                placeholder="010-0000-0000"
+              />
+            </label>
+
+            <label class="s4__field">
+              <span class="s4__field-label">궁금한 점 <em>(선택)</em></span>
+              <textarea
+                name="question"
+                rows="2"
+                placeholder="답변드릴게요"
+              ></textarea>
+            </label>
+
+            <label class="s4__field">
+              <span class="s4__field-label">추천코드 <em>(선택)</em></span>
+              <input
+                type="text"
+                name="referralCode"
+                placeholder="추천코드를 입력해주세요"
+              />
+            </label>
+
+            <label class="s4__agree">
+              <input type="checkbox" name="agree" required />
+              <span
+                >웨비나 안내 목적의 정보 수신에 동의하며, 입력하신 휴대폰
+                번호로 온라인 웨비나 주소를 보내드립니다.</span
+              >
+            </label>
+
+            <button type="submit" class="s4__submit" id="submitBtn">
+              자리 맡기 →
+            </button>
+          </form>
+
+          <div class="s4__success" id="registerSuccess" hidden>
+            <div class="s4__success-icon">✅</div>
+            <h3>신청 완료!</h3>
+            <p id="successMessage">
+              밤 9시, 만나요.<br />
+              입력하신 휴대폰 번호로 안내 문자를 보내드릴게요.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <article class="poster" id="invalidDate" hidden>
+      <div class="invalid-date">
+        <h1>유효하지 않은 일정입니다</h1>
+        <p>
+          올바른 웨비나 링크를 통해 다시 접속해주세요.<br />
+          (예: /webinar/1/20260507)
+        </p>
+      </div>
+    </article>
+
+    <!-- =========================================
+         Firebase — 신청 폼 제출
+         경로: webinar/{topicId}/{YYYYMMDD}/registrations
+         ========================================= -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+      const TOPIC_ID = "1";
+      const WEEKDAYS = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+
+      // URL pathname에서 YYYYMMDD 추출 (예: /webinar/1/20260528)
+      function parseDateFromPath() {
+        const m = window.location.pathname.match(/\/webinar\/\d+\/(\d{8})/);
+        if (!m) return null;
+        const raw = m[1];
+        const year = parseInt(raw.slice(0, 4), 10);
+        const month = parseInt(raw.slice(4, 6), 10);
+        const day = parseInt(raw.slice(6, 8), 10);
+        const d = new Date(year, month - 1, day);
+        if (
+          d.getFullYear() !== year ||
+          d.getMonth() !== month - 1 ||
+          d.getDate() !== day
+        ) {
+          return null;
+        }
+        return { raw, year, month, day, weekday: WEEKDAYS[d.getDay()] };
+      }
+
+      const dateInfo = parseDateFromPath();
+      const poster = document.getElementById("poster");
+      const invalidPoster = document.getElementById("invalidDate");
+
+      if (!dateInfo) {
+        poster.hidden = true;
+        invalidPoster.hidden = false;
+      } else {
+        document.getElementById("whenMonth").textContent = `${dateInfo.month}월`;
+        document.getElementById("whenDay").textContent = String(dateInfo.day).padStart(2, "0");
+        document.getElementById("whenWeekday").textContent = dateInfo.weekday;
+        document.getElementById("successMessage").innerHTML =
+          `${dateInfo.month}월 ${dateInfo.day}일 밤 9시, 만나요.<br />입력하신 휴대폰 번호로 안내 문자를 보내드릴게요.`;
+
+        const titleDate = `${dateInfo.month}월 ${dateInfo.day}일 (${dateInfo.weekday.charAt(0)})`;
+        document.title = `AI시대, 앞서가려면 | ${titleDate} 학부모 무료 웨비나`;
+      }
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAsz0sQCarUaXESN2zO0ijDx4YzJmJYWaY",
+        authDomain: "choco-f09f8.firebaseapp.com",
+        projectId: "choco-f09f8",
+        storageBucket: "choco-f09f8.firebasestorage.app",
+        messagingSenderId: "749258469756",
+        appId: "1:749258469756:web:c8845bdc68fe282a6cb4f9",
+        measurementId: "G-9BFT8WGPFH",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const form = document.getElementById("registerForm");
+      const success = document.getElementById("registerSuccess");
+      const submitBtn = document.getElementById("submitBtn");
+
+      if (form && dateInfo) {
+        const nicknameInput = form.querySelector('input[name="nickname"]');
+        const birthYearInput = form.querySelector('input[name="birthYear"]');
+        const phoneInput = form.querySelector('input[name="phone"]');
+        const agreeInput = form.querySelector('input[name="agree"]');
+
+        const isValidYear = (v) => {
+          const n = parseInt(v, 10);
+          return (
+            /^\d{4}$/.test(v) && !isNaN(n) && n >= 2005 && n <= new Date().getFullYear()
+          );
+        };
+        const updateSubmitState = () => {
+          const validNickname = !!nicknameInput.value.trim();
+          const validYear = isValidYear(birthYearInput.value.trim());
+          const validPhone =
+            phoneInput.value.replace(/[^0-9]/g, "").length >= 9;
+          const validAgree = agreeInput.checked;
+          submitBtn.disabled = !(
+            validNickname &&
+            validYear &&
+            validPhone &&
+            validAgree
+          );
+        };
+        [nicknameInput, birthYearInput, phoneInput].forEach((el) =>
+          el.addEventListener("input", updateSubmitState),
+        );
+        agreeInput.addEventListener("change", updateSubmitState);
+        updateSubmitState();
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const fd = new FormData(form);
+          const nickname = (fd.get("nickname") || "").trim();
+          const birthYear = (fd.get("birthYear") || "").trim();
+          const phone = (fd.get("phone") || "").trim();
+          const question = (fd.get("question") || "").trim();
+          const referralCode = (fd.get("referralCode") || "").trim();
+          const agree = !!fd.get("agree");
+
+          if (!nickname) {
+            alert("닉네임을 입력해주세요.");
+            return;
+          }
+          const yearNum = parseInt(birthYear, 10);
+          if (
+            !birthYear ||
+            isNaN(yearNum) ||
+            yearNum < 2005 ||
+            yearNum > new Date().getFullYear()
+          ) {
+            alert("아이 출생년도를 4자리 숫자로 입력해주세요.");
+            return;
+          }
+          if (!phone || !/[0-9]{9,}/.test(phone.replace(/[^0-9]/g, ""))) {
+            alert("휴대폰 번호를 정확히 입력해주세요.");
+            return;
+          }
+          if (!agree) {
+            alert("개인정보 활용 동의가 필요합니다.");
+            return;
+          }
+
+          const originalText = submitBtn.textContent;
+          submitBtn.disabled = true;
+          submitBtn.textContent = "신청 중…";
+
+          try {
+            // webinar/{TOPIC_ID}/sessions/{YYYYMMDD}/registrations
+            const regCol = collection(
+              db,
+              "webinar",
+              TOPIC_ID,
+              "sessions",
+              dateInfo.raw,
+              "registrations",
+            );
+            await addDoc(regCol, {
+              nickname,
+              birthYear: yearNum,
+              phone,
+              question,
+              referralCode,
+              userAgent: navigator.userAgent,
+              createdAt: serverTimestamp(),
+            });
+            form.hidden = true;
+            success.hidden = false;
+            success.scrollIntoView({ behavior: "smooth", block: "center" });
+          } catch (err) {
+            console.error("[Firebase 제출 실패]", err);
+            alert(
+              "신청 중 오류가 발생했습니다.\n잠시 후 다시 시도해주세요.\n(" +
+                (err?.message || "unknown error") +
+                ")",
+            );
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
